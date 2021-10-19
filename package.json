@@ -1,0 +1,23 @@
+{
+  "name": "whatsappjs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src app.js",
+    "dev": "nodemon -L --watch src app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "qrcode-terminal": "^0.12.0",
+    "sharp": "^0.29.1",
+    "socket.io": "^4.3.0",
+    "tedious": "^13.1.0",
+    "whatsapp-web.js": "^1.14.1"
+  }
+}

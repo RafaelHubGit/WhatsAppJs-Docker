@@ -1,0 +1,25 @@
+# Este documento sirve para crear los contenedores y/o servicios
+# en este caso se esta creando un contenedor de nodejs y otro de mongo
+
+# Se especifica la version de docker-compose 
+version: "3"
+
+# Se declara que se haran los servicios 
+services:
+  #Se pone el nombre del servicio en este caso es web pero podria ser cualquer cosa 
+  web:
+    # Aqui se declara la imagen que se va a utilizar, en este caso ya esta creada desde el documento de Dockerfile 
+    #pero podria ser por ejemplo php
+    container_name: WhatsAppJS
+    # para que sismepre suba el servicio
+    restart: always
+    # va a construid a partir del archivo actual (por el punto, si no se debe especificar la ruta), este va a buscar el archivo Dockerfile
+    build: .
+    # Se seleccionan los puertos primero el puerto que va a expponer del host (de la computadora) y despues el puerto que va a exponer desde 
+    # el contenedor (generalmente este segundo se agrega el puerto default del servicio por ejemplo nodejs 443)
+    ports:
+      - "8002:8001"
+    # Se crea el volumen para este servicio, el volumen es que se va a crear una carpeta y esa carpeta se va a compartir entre el host y el contenedor
+    # en este caso se especifica que todo lo que este en esta carpeta (por el punto) se va a compartir en el contenedor en la carpeta /usr/src/app
+    volumes: 
+      - ./src:/home/pptruser/app/src
