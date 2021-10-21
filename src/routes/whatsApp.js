@@ -1,5 +1,6 @@
 const { Router } = require('express');
-const { whatsAppInit, whatsAppSend } = require('../controllers/whatsApp');
+const { whatsAppInit } = require('../controllers/whatsApp');
+const { whatsAppSend, socket } = require('../sockets/whatsappSocket');
 
 
 const router = Router();
