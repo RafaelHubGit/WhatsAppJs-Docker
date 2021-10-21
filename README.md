@@ -1,3 +1,12 @@
-# WebServer + RestServer
+# WhatsApp con Js y Docker
 
-Recuerden que deben de ejecutar ```npm install``` para reconstruir los módulos de Node.
+Para iniciar, estar en la carpeta y correr 
+
+##docker-compose build
+
+Eso crea una imagen en docker 
+
+Para correr 
+
+##docker-compose up
+
